@@ -82,7 +82,7 @@
 
         </div>
         <div id="div-button">
-            <a href="./reservation.html"><button id="scenario-button">Réserver</button></a>
+            <a href="reservation.php"><button id="scenario-button">Réserver</button></a>
         </div>
     </div>
 
