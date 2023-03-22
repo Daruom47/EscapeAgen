@@ -26,7 +26,7 @@ const NAVBAR_LINK = [
   { name: "RESERVER", url: "./reservation.html" },
   { name: "NOUS TROUVER", url: "./index.html#nousTrouver" },
   // {name: "Réservations", url: "#"},
-  // { name: "CONTA", url: "./index.html#formButton" },
+  // { name: "CONTA", url: "./index.php#formButton" },
 ];
 
 /* <li><a href="#">Nos scénarios</a></li>

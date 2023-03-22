@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bodystyle.css" />
+    <link rel="stylesheet" href="./css/overlay.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
+    <title>AGEN ESCAPE</title>
+ </head>
+ <body>
+    <div id="messageFormulaire" class="overlay">
+        <div id="overlayBackground"></div>
+        <div id="overlayMessage"><p>Votre message a bien été envoyé à notre équipe</p></div>
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+      <div class="container">
+        <div class="container_nav">
+          <div id="div_nav">
+            <div id="div-ul">
+              <ul id="links_menu">
+  
+              </ul>
+            </div>
+            <div class="icons"></div>
+          </div>
+          <div id="logo">
+            <img src="./images/logo.png" alt="img_logo">
+          </div>
+          <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
+        </div>
+        <div class="slogan flex">
+      </div>
+    <!-- BODY -->
+    <div class="container0">
+        <div class="storycontainer">
+            <div class="storyimg"><img src="./images/scenarios/scenario_1.png"></div>
+            <div class="storycontainer2">  
+                <div class="storytitle">Titre</div>
+                <div class="synopsis">Histoire</div>
+                <div class="storycontainer3">
+                    <div class="difficulte">Difficulté</div>
+                    <div class="storycontainer4">
+                        <div class="min">0 joueurs minimum</div>
+                        <div class="max">99 joueurs maximum</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scorebox">
+            <div class="tableauscores">TABLEAU DES SCORES</div>
+            <table class="leaderboard">
+                <th >Classement</th>
+                <th class ="lb">Logo</th>
+                <th >Team</th>
+                <th >Temps</th>
+                <tr class ="lb1">
+                    <td >1st</td>
+                    <td><img src="./images/equipes/logoteam1.png"></td>
+                    <td >Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb2">
+                    <td >2nd</td>
+                    <td ><img src="./images/equipes/logoteam2.png"></td>
+                    <td >Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb3">
+                    <td>3rd</td>
+                    <td><img src="./images/equipes/logoteam3.png"></td>
+                    <td>Scooby-dudes</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb4">
+                    <td>4th</td>
+                    <td><img src="./images/equipes/logoteam4.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb5">
+                    <td>5th</td>
+                    <td><img src="./images/equipes/logoteam5.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb6">
+                    <td>6th</td>
+                    <td><img src="./images/equipes/logoteam6.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb7">
+                    <td>7th</td>
+                    <td><img src="./images/equipes/logoteam7.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb8">
+                    <td>8th</td>
+                    <td><img src="./images/equipes/logoteam8.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb9">
+                    <td>9th</td>
+                    <td><img src="./images/equipes/logoteam9.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+                <tr class ="lb10">
+                    <td>10th</td>
+                    <td><img src="./images/equipes/logoteam10.png"></td>
+                    <td>Crewmate</td>
+                    <td class="chrono">47" 23'</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="copyright">
+          <img class="logoFooter" src="./images/logo.png" />
+          <p>Copyright © 2020 Agen Escape Mentions légales</p>
+          <p>Création graphique <span class="spanNomGroupe">Studio chromatique</span>
+          </p>
+          <p>Développement <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
+          <hr>
+          <div class="social">
+          </div>
+        </div>
+        <div class="row input-container">
+          <div class="col-xs-12">
+            <div class="styled-input wide">
+              <input id="name" type="text" required />
+              <label>Nom</label>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="styled-input wide">
+              <input id="email" type="text" required />
+              <label>Email</label>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="styled-input wide">
+              <textarea id="message" required></textarea>
+              <label>Message</label>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div id="formButton" class="btn-lrg submit-btn">Envoyer le message</div>
+          </div>
+        </div>
+      </div>
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script> -->
+      <!-- <script src="./js/carrusel.js"></script> -->
+      <script src="./js/nav.js"></script>
+      <script src="./js/scenarios.js"></script>
+      <script src="./js/bodyscript.js"></script>
+      <!-- <script src="./js/keystroke.js"></script> -->
+      <script src="./js/formulaire.js"></script>
+ </body>
+</html>
