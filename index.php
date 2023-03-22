@@ -39,7 +39,6 @@
         <!-- <img alt="Escapez-vous de la routine!" src="./images/slogan.png"> -->
       </div>
       <div id="presentationEscape">
-
         <div class="welcomeText">
           <h1 class="textAnimation">ESCAPE GAME À AGEN</h1>
           <h2>BIENVENUE CHEZ AGEN ESCAPE !</h2>
@@ -49,10 +48,8 @@
           <div id="presentationAnimation">
             <p class="presentationText"></p>
           </div>
-
         </div>
       </div>
-
     <div id ="scenariosList" class="flex">
       <div class="subtitleStyle"><h2 class="subtitle">NOS SCENARIOS</h2></div>
       <div id="carrusel" class="slider">
@@ -61,14 +58,8 @@
         <button class="btn-next"></button>
       </div>
     </div>
-
-
-    
     <div id="nousTrouver" class="nousTrouver flex column">
       <div class="subtitleStyle"><h2 class="subtitle">NOUS TROUVER</h2></div>
-      
-
-
         <div class="map">
           <div id="map"></div>
         </div>
@@ -84,11 +75,7 @@
             </a>
             <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
           </div>
-
-
       </div>
-
-
     </div>
     <!-- <hr> -->
     <div class="footer">
@@ -127,18 +114,17 @@
       </div>
     </div>
     </div>
-
-
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap">
 </script>
-
     <script src="./js/map.js"></script>
     <script src="./js/scenarios.js"></script>
     <script src="./js/carrusel.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
-    
   </body>
+
+
+
 </html>
