@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--test <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+
     <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
     <title>AGEN ESCAPE - ACCUEIL</title>
   </head>
@@ -20,13 +20,12 @@
       <div id="overlayMessage">
         <p>Votre message a bien été envoyé à notre équipe</p>
       </div>
-      <!-- Button to close the overlay navigation -->
+
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="container"> 
       <?php include_once __DIR__. '/includes/navbar.php';?> 
       <div class="slogan flex">
-        <!-- <img alt="Escapez-vous de la routine!" src="./images/slogan.png"> -->
       </div>
       <div id="presentationEscape">
         <div class="welcomeText">
@@ -68,18 +67,15 @@
             <a title="Naviguer avec Waze" href="https://www.waze.com/fr/livemap/directions?to=ll.44.19858834985041%2C0.6318457930048904" target="_blank">
               <img alt="Icône de Waze" src="./images/icon_waze.png">
             </a>
-            <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
           </div>
         </div>
       </div>
-      <!-- <hr> -->
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
     <script src="./js/map.js"></script>
     <script src="./js/scenarios.js"></script>
     <script src="./js/carrusel.js"></script>
-    <!-- <script src="./js/nav.js"></script> -->
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
   </body>
