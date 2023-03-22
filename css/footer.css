@@ -1,0 +1,282 @@
+/* ---------------------------------------------------- FOOTER -------------------------------------------------------*/
+.footer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(
+          0.25turn,
+          #141414,
+          #de9300,
+          #141414
+  );
+  border-image-slice: 1;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.logoFooter{
+  width: 75px;
+  margin-left: 17%;
+  margin-top: 5%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  height: auto;
+}
+.spanNomGroupe{
+  color: #de9300;
+  font-size: large;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+}
+
+.copyright{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1275px){
+  .copyright {
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0%;
+  }
+  .social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+  }
+  .logoFooter{
+    width: 75px;
+    margin-left: 5%;
+    margin-top: 3%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+  }
+  hr{
+
+    max-width: 50%;
+  }
+}
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram{
+  background: transparent;
+  color: white;
+}
+
+/* Facebook */
+.fa-facebook:hover {
+  border: 1px solid;
+  border-bottom-style: none;
+  border-top-style: none;
+  border-color: #de9300;
+  color: #de9300;
+}
+
+/* Twitter */
+.fa-twitter:hover {
+  border: 1px solid;
+  border-bottom-style: none;
+  border-top-style: none;
+  border-color: #de9300;
+  color: #de9300;
+}
+
+/* Instagram */
+.fa-instagram:hover{
+  border: 1px none #de9300;
+  border-right-style: solid;
+  border-left-style: solid;
+  color: #de9300;
+}
+
+
+/* ------------------------------------------- FORM FOOTER -----------------------------------------------------------*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+  .styled-input {
+    width:100%;
+  }
+
+  .logoFooter{
+    margin-left: 17%;
+    margin-top: 5%;
+    transform: translateX(-50%);
+  }
+
+}
+
+.styled-input label {
+  color: #999;
+  padding: 0.2rem 15px 1rem 15px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 370px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 1em;
+  resize: none;
+}
+
+.input-container {
+  width: 400px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: right;
+  padding: 7px 35px;
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border: 1px none #de9300;
+  border-right-style: solid;
+  border-left-style: solid;
+
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+  0 1px 1px 0 rgba(0,0,0,0.09);
+  border-color: #de9300;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-radius: 5px;
+  background-color: #141414;
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width:82%;
+    float: none;
+    text-align:center;
+    padding: 7px 35px;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    border: 1px none #de9300;
+    border-right-style: solid;
+    border-left-style: solid;
+  }
+}
+@media only screen and (max-width: 475px) {
+  #name, #email, #message{
+    max-width: 88%;
+    margin-left: 1%;
+    margin-right: 2%;
+  }
+  #formButton{
+    max-width: 76%;
+    margin-left: 1%;
+    margin-right: 2%;
+
+  }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+.copyright > p {
+  color: white;
+}

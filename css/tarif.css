@@ -1,0 +1,229 @@
+body {
+    background-color: #141414;
+    color: white;
+    /* font-family:"Muli",sans-serif ; */
+    font-family: 'Recursive';
+}
+
+#sectionTarifs, #sectionHoraires {
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+}
+
+#tarif-title h2 {
+    font-size: 2.5rem;
+    
+}
+
+#tarif-title h4 {
+    color: #6b6a6a;
+}
+
+
+#tarif-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+}
+
+h3 {
+    border-bottom: #6b6a6a 2px solid;
+    margin: 15px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #de9300;
+}
+
+.colPlayer, .colHeureCreuse, .colHeurePleine {
+    margin: 15px;
+    min-width: 26%;
+}
+
+.divPlayer {
+    background: #6b6a6a;
+    border: 2px solid #6b6a6a;
+
+}
+
+.divHeureCreuse {
+    background: #1b1b1b;
+    border: 2px solid #f59805;
+} 
+
+.divHeurePleine {
+    background: #1b1b1b;
+    border: 2px solid #f50505;
+}
+
+.divPlayer, .divHeureCreuse, .divHeurePleine {
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+}
+
+#tarif-description {
+    margin-top: 3%;
+}
+
+#scenario-button {
+    color: white;
+    background-color:#1b1b1b ;
+    padding: 1rem 2.5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    border: 2px solid #f59805;
+    font-size: 1.3rem;
+}
+
+#scenario-button:hover {
+    background-color: #f59805;
+    transition: 0.5s ease;
+}
+
+#div-button {
+    margin-top: 9%;
+}
+
+#sectionHoraires {
+    margin-top: 11%;
+    background-color: #1b1b1b;
+}
+
+#sectionHoraires h2 {
+    padding-top: 5%;
+    margin-bottom: 5%;
+    color: #de9300;
+    font-size: 2.5rem;
+}
+
+#div-tab-horaires {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+#div-jours, #div-horaires {
+    min-width: 27%;
+    position: relative;
+}
+
+#horaires , #jours {
+    border-top: 4px solid #f59805;
+    
+}
+#horaires {
+    border-left: 4px solid #f59805;
+}
+
+#div-horaires h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #f59805;
+}
+
+#jours p {
+    font-size: large;
+    
+}
+
+#horaires p {
+    font-size: large;
+    
+}
+
+#div-jours h4, #div-horaires h4 {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 670px) {
+
+    #sectionTarifs {
+        margin-top: 21%;
+    }
+    .divPlayer, .divHeureCreuse, .divHeurePleine {
+        font-size: 1rem;
+        min-height: 33px;
+    }
+
+    #tarif-title h2 {
+        font-size: 1.7rem;
+    }
+
+    #span1, #span3, #span4, #span5, #span7, #span8 {
+        line-height: 33px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    #tarif-description {
+        font-size: 0.8rem;
+        margin-bottom: 17%;
+    }
+
+    #sectionHoraires h2 {
+        padding-top: 9%;
+        margin-bottom: 9%;
+        font-size: 1.7rem;
+    }
+
+    #div-jours h4, #div-horaires h4 {
+        font-size: 1rem;
+    }
+
+    #jours p {
+        font-size: small;
+        
+    }
+    #horaires p {
+        font-size: small;
+        
+    }
+
+    #div-jours, #div-horaires {
+        min-width: 37%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .divPlayer, .divHeureCreuse, .divHeurePleine {
+        font-size: 1rem;
+        min-height: 55px;
+    }
+
+    #span1 {
+        line-height: 48px;
+    }
+    #span3 {
+        line-height: 20px;
+    }
+
+    #span2 {
+        line-height: 16px;
+    }
+
+    #span4, #span5, #span7, #span8 {
+        line-height: 21px;
+    }
+
+    #span6, #span9 {
+        line-height: 19px;
+    }
+}
+

@@ -1,0 +1,350 @@
+
+
+
+
+
+
+
+
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: linear-gradient(to right, rgb(255 255 255 / 0%), #de9300, rgb(255 255 255 / 0%));
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-image {
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  background-color: #050404d1;
+  padding: 0.5em;
+  width: 80%;
+  border-radius: 25px;
+  border: 2px solid #de9300;
+  text-shadow: 1px 1px 2px black, 0 0 25px #de9300, 0 0 5px #de9300;
+}
+
+.content-details h3 {
+  color: #fdfff7;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  font-size: 2.0em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 25px #de9300, 0 0 5px #de9300;
+
+}
+
+
+.content-details p {
+  color: #fff;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
+
+.fadeIn-right {
+  left: 80%;
+}
+
+
+
+
+
+
+.slider {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.slides {
+  width: 100%;
+  /* card * 4 + margin * 4 */
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s ease;
+  overflow: hidden;
+}
+
+.slides .slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  max-width: 100%;
+
+  /* margin-right: 15px; */
+  /* margin-left: 15px; */
+  border-radius: 10px;
+
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  transform: translateX(0px);
+}
+
+.slider .btn-prev,
+.slider .btn-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgb(4, 4, 4);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(17, 17, 17, .15);
+  cursor: pointer;
+}
+
+.slider .btn-prev {
+  left: -15px;
+}
+
+.slider .btn-next {
+  right: -15px;
+}
+
+.slider .btn-prev:after,
+.slider .btn-next:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #de9300;
+  border-right: 1px solid #de9300;
+}
+
+.slider .btn-prev:after {
+  left: 50%;
+  top: 50%;
+  transform-origin: top right;
+  transform: rotate(-135deg) translate(100%, -100%);
+}
+
+.slider .btn-next:after {
+  left: 50%;
+  top: 50%;
+  transform-origin: top right;
+  transform: rotate(45deg) translate(-25%, 50%);
+}
+
+.carrusel-wrap .bx-controls .bx-controls-direction>.btn-prev.invisible,
+.carrusel-wrap .bx-controls .bx-controls-direction>.btn-next.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100vh;
+  width: 0%;
+  position: fixed; /* Stay in place */
+  z-index: 101; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+#overlayBackground {
+
+
+  position: relative;
+  background-image: url(../images/backgrounds/4.png);
+  /* background-repeat: no-repeat; */
+
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  /* opacity: 0.5; */
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  height: 100vh;
+
+
+
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100vh;
+  width: 0%;
+  position: fixed; /* Stay in place */
+  z-index: 102; /* Sit on top */
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+#overlayMessage{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color:#de9300;
+
+  font-size: 20px;
+  opacity: 0.8;
+  /* position: relative; */
+  z-index: 103;
+
+
+  background-image: url(../images/message_sent.png);
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#overlayMessage > p {
+  font-size: 2em;
+  background-color: #211f1fe3;
+  border: 3px solid transparent;
+  border-image: linear-gradient(0.25turn, #141414, #de9300, #141414);
+  border-image-slice: 1;
+  padding: 5vh 5vw;
+}
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  z-index: 888;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #de9300;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

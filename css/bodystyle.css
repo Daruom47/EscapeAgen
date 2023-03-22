@@ -1,0 +1,332 @@
+/* ---------------------- CSS du body ---------------------- */
+
+body {
+  background-color: #111111;
+  color: rgb(252, 252, 245);
+  font-family: "title";
+  font-size: 2vh;
+  /* background: url(../images/fd.jpg) no-repeat center; */
+  /* background-size: cover; */
+  /* opacity: .5; */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* ---------------------- CSS du container general ---------------------- */
+
+
+
+/* ---------------------- CSS div scenarios ---------------------- */
+
+.storycontainer {
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10%;
+}
+
+.storyimg > img {
+  max-width: 100%;
+  width: 400px;
+  /* padding: 12px; */
+  border-radius: 3px;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    #111111,
+    #de9300,
+    #111111
+  );
+  padding: 3px;
+  margin-top: 15%;
+}
+
+.storycontainer2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.storytitle {
+  color: #de9300;
+  font-size: 30px;
+  margin-bottom: 1%;
+  width: 85%;
+  text-align: center;
+ }
+ 
+.synopsis {
+  color: #ffffff;
+  text-align: left;
+  padding: 5px 5px;
+  margin-top: 1%;
+  width: 85%;
+  max-width: 325px;
+  font-size: 20px;
+
+  background: linear-gradient(
+    to right,
+    #111111,
+    #222222,
+    #111111
+  );
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+    border-image: linear-gradient(
+            0.25turn,
+            #141414,
+            #de9300,
+            #141414
+    );
+    border-image-slice: 1;
+  }
+
+.difficulte {
+  color: #ffffff;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(
+    0.25turn,
+    #141414,
+    #de9300,
+    #141414
+    );
+    border-image-slice: 1;
+
+  background: linear-gradient(
+    to right,
+    #111111,
+    #222222,
+    #111111
+    );
+
+  text-align: left;
+  padding: 6px 5px;
+  margin-top: 2.5%;
+  /* width: 390px; */
+  width: 68%;
+  font-size: 20px;
+  }
+
+.player {
+  color: #ffffff;
+  border: solid #de9300;
+  background-color: #171717;
+  padding: 5px 5px;
+  width: 490px;
+  font-size: 20px;
+  }
+
+.storycontainer3 {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.storycontainer4 {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.min {
+  text-align: left;
+  color: #ffffff;
+  border-bottom: 2px solid transparent;
+    border-image: linear-gradient(
+            0.25turn,
+            #141414,
+            #de9300
+    );
+    border-image-slice: 1;
+
+    background: linear-gradient(
+      to right,
+      #111111,
+      #222222
+    );
+
+  padding: 5px 2px 5px 2px;
+  width: 31%;
+  font-size: 20px;
+}
+
+.max {
+  text-align: right;
+  color: #ffffff;
+  border-bottom: 2px solid transparent;
+    border-image: linear-gradient(
+            0.25turn,
+            #de9300,
+            #141414
+    );
+    border-image-slice: 1;
+
+    background: linear-gradient(
+      to right,
+      #222222,
+      #111111
+    );
+
+  padding: 5px 2px 5px 2px;
+  width: 195px;
+  font-size: 20px;
+}
+
+.scorebox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  align-content: center;
+  align-items: center;
+}
+
+.tableauscores {
+ text-align: center;
+ color: #de9300;
+ margin-bottom: 4%;
+ margin-top: 5%;
+ text-decoration: underline;
+}
+
+.leaderboard {
+  border-spacing: 0;
+  border: solid 0.1px #de9300;
+  border-collapse: separate;
+  border-top: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 85%;
+  box-shadow: #de930044 0px 19px 38px, #00000044 0px 15px 12px;
+}
+
+th {
+  border-spacing: 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: solid 0.1px;
+  border-color: #de9300;
+  color: #ffffff;
+}
+
+td {
+  height: 40px;
+ }
+
+td > img{
+  width: 40px;
+  height: 40px;
+  border: solid 0.1px #ffffff;
+  border-radius: 10px;
+  display: flex;
+}
+
+.lb {
+  width: 40px;
+
+}
+
+.chrono {
+  text-align: center;
+}
+
+.lb1 {
+  border: solid 0.3px #222222;
+  border-left: none;
+  border-right: none;
+  border-radius: 10px;
+  background: linear-gradient(
+      to right,
+      #be8300,
+      #ffaa00,
+      #be8300
+  );
+  color: rgb(0, 0, 0);
+}
+
+.lb2 {
+  border: solid 0.3px silver;
+  border-radius: 10px;
+  background: linear-gradient(
+      to right,
+      #444444,
+      #666666,
+      #444444
+  );
+  color: silver;
+}
+
+.lb3 {
+  border: solid 0.3px coral;
+  border-radius: 10px;
+  background: linear-gradient(
+      to right,
+      #383838,
+      #483838,
+      #383838
+  );
+  color: coral;
+}
+
+.lb4 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #333333;
+  color: rgb(255, 255, 255);
+}
+
+.lb5 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #282828;
+  color: rgb(255, 255, 255);
+}
+
+.lb6 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #222222;
+  color: rgb(255, 255, 255);
+}
+
+.lb7 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.lb8 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.lb9 {
+  border: solid 0.3px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #080808;
+  color: #ffffff;
+}
+
+.lb10 {
+  border-spacing: 0;
+  border: solid 0.3px #ffffff;
+  color: #ffffff;
+  background: #000000;
+}

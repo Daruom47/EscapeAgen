@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule tarifs$ tarif.html
+RewriteRule reserver$ reservation.html
+RewriteRule home$ index.html
+RewriteRule scenario-(.*+)$ PageScenar.html?scenario=$1
