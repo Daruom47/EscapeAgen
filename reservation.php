@@ -21,20 +21,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="container">
-        <div class="container_nav">
-            <div id="div_nav">
-                <div id="div-ul">
-                    <ul id="links_menu">
-
-                    </ul>
-                </div>
-                <div class="icons"></div>
-            </div>
-            <div id="logo">
-                <img src="./images/logo.png" alt="img_logo">
-            </div>
-            <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
-        </div>
+    <?php include_once __DIR__. '/includes/navbar.php';?> 
         <div class="slogan flex">
             <!-- <img alt="Escapez-vous de la routine!" src="./images/slogan.png"> -->
     </div>
@@ -103,7 +90,7 @@
         <button type="submit">Réserver</button>
     </form>
     </div>
-    <script src="./js/nav.js"></script>
+    <!-- <script src="./js/nav.js"></script> -->
 
 </body>
 </html>
