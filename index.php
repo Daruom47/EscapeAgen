@@ -38,6 +38,7 @@
           </div>
         </div>
       </div>
+
       <div id="scenariosList" class="flex">
         <div class="subtitleStyle">
           <h2 class="subtitle">NOS SCENARIOS</h2>
@@ -68,8 +69,9 @@
               <img alt="Icône de Waze" src="./images/icon_waze.png">
             </a>
           </div>
-        </div>
+
       </div>
+      <!-- <hr> -->
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
