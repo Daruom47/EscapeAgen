@@ -77,9 +77,7 @@
           </div>
       </div>
     </div>
-
     <!-- <hr>s -->
-
     <div class="footer">
       <div class="copyright">
         <img class="logoFooter" src="./images/logo.png" />
