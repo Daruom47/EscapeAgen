@@ -25,20 +25,7 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="container">
-      <div class="container_nav">
-        <div id="div_nav">
-          <div id="div-ul">
-            <ul id="links_menu">
-
-            </ul>
-          </div>
-          <div class="icons"></div>
-        </div>
-        <div id="logo">
-          <img src="./images/logo.png" alt="img_logo">
-        </div>
-          <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
-      </div>
+    <?php include_once __DIR__. '/includes/navbar.php';?> 
       <div id="sectionTarifs">
         <div id="tarif-title">
             <h2>NOS TARIFS</h2>
@@ -135,43 +122,9 @@
     </div>
 
 
-    <div class="footer">
-      <div class="copyright">
-        <img class="logoFooter" src="./images/logo.png" />
-        <p>Copyright © 2020 Agen Escape Mentions légales</p>
-        <p>Création graphique <span class="spanNomGroupe">Studio chromatique</span>
-        </p>
-        <p>Développement <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
-        <hr>
-        <div class="social">
-        </div>
-      </div>
-      <div class="row input-container">
-        <div>
-          <div class="styled-input wide">
-            <input id="name" type="text" required />
-            <label>Nom</label>
-          </div>
-        </div>
-        <div>
-          <div class="styled-input wide">
-            <input id="email" type="text" required />
-            <label>Email</label>
-          </div>
-        </div>
-        <div>
-          <div class="styled-input wide">
-            <textarea id="message" required></textarea>
-            <label>Message</label>
-          </div>
-        </div>
-        <div>
-          <div id="formButton" class="btn-lrg submit-btn">Envoyer le message</div>
-        </div>
-      </div>
+    <?php include_once __DIR__. '/includes/footer.php';?> 
     </div>
-    </div>
-    <script src="./js/nav.js"></script>
+    <!-- <script src="./js/nav.js"></script> -->
     <script src="./js/formulaire.js"></script>
 </body>
 </html>
