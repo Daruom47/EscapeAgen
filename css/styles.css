@@ -312,15 +312,16 @@ div.slogan>p {
   /* height: 100vh; */
   /* width: 100vw;  */
 }
-.welcomeText {
+.welcomeText,.adminMsg {
   /* position: absolute; */
   opacity: 1;
   padding-top: 5px;
   padding-bottom: 5px;
-  
+  margin-top: 70px;
   background-color:#111111bf;
   text-align: center;
 }
+
 .subtitleStyle {
   padding-top: 5px;
   padding-bottom: 10px;
