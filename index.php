@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<<<< Temporary merge branch 1
-    <!--XXXXXX <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
-=========
-    <!--test <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
->>>>>>>>> Temporary merge branch 2
     <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
     <title>AGEN ESCAPE - ACCUEIL</title>
   </head>
@@ -43,7 +38,6 @@
           </div>
         </div>
       </div>
-<<<<<<<<< Temporary merge branch 1
     <div id ="scenariosList" class="flex">
       <div class="subtitleStyle"><h2 class="subtitle">NOS SCENARIOS</h2></div>
       <div id="carrusel" class="slider">
@@ -54,7 +48,6 @@
     </div>
     <div id="nousTrouver" class="nousTrouver flex column">
       <div class="subtitleStyle"><h2 class="subtitle">NOUS TROUVER</h2></div>
-=========
       <div id="scenariosList" class="flex">
         <div class="subtitleStyle">
           <h2 class="subtitle">NOS SCENARIOS</h2>
@@ -69,7 +62,7 @@
         <div class="subtitleStyle">
           <h2 class="subtitle">NOUS TROUVER</h2>
         </div>
->>>>>>>>> Temporary merge branch 2
+
         <div class="map">
           <div id="map"></div>
         </div>
@@ -87,7 +80,7 @@
             </a>
             <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
           </div>
-<<<<<<<<< Temporary merge branch 1
+
       </div>
 
 
@@ -125,21 +118,15 @@
         </div>
         <div>
           <div id="formButton" class="btn-lrg submit-btn">Envoyer le message</div>
-=========
->>>>>>>>> Temporary merge branch 2
+
         </div>
       </div>
       <!-- <hr> -->
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
-<<<<<<<<< Temporary merge branch 1
-    </div>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap">
-</script>
-=========
+
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
->>>>>>>>> Temporary merge branch 2
+
     <script src="./js/map.js"></script>
     <script src="./js/scenarios.js"></script>
     <script src="./js/carrusel.js"></script>
