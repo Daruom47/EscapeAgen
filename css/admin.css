@@ -1,0 +1,63 @@
+table.darkTable {
+
+  border: 2px solid #DE9300;
+  background-color: #4A4A4A;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+  border: 1px solid #4A4A4A;
+  padding: 3px 2px;
+}
+table.darkTable tbody td {
+
+  color: #E6E6E6;
+}
+table.darkTable tr:nth-child(even) {
+  background: #DE9300;
+}
+table.darkTable thead {
+  background: #000000;
+  border-bottom: 3px solid #DE9300;
+}
+table.darkTable thead th {
+
+  font-weight: bold;
+  color: #DE9300;
+  text-align: center;
+  border-left: 2px solid #DE9300;
+}
+table.darkTable thead th:first-child {
+  border-left: none;
+}
+
+table.darkTable tfoot {
+
+  font-weight: bold;
+  color: #E6E6E6;
+  background: #000000;
+  background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+  border-top: 2px solid #DE9300;
+}
+table.darkTable tfoot td {
+
+}
+
+
+body > div > div.adminMsg > table
+{
+  width: 70%;
+    border: solid;
+    font-size: 21px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+.preview {
+    width: 64px;
+}
