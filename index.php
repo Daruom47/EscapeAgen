@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . "/includes/config.php";
+require_once __DIR__ . "/includes/fonctions.php";
+$bd = connect();
+$requete = $bd->prepare("SELECT * FROM scenario;");
+
+$requete->execute();
+$resultats = $requete->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
     <title>AGEN ESCAPE - ACCUEIL</title>
-    <!-- TEST COMMENTAIRE -->
   </head>
   <body>
     <div id="messageFormulaire" class="overlay">
@@ -24,7 +32,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="container"> 
-      <?php include_once __DIR__. '/includes/navbar.php';?> 
+      <?php include_once __DIR__ . "/includes/navbar.php"; ?> 
       <div class="slogan flex">
       </div>
       <div id="presentationEscape">
@@ -44,7 +52,49 @@
           <h2 class="subtitle">NOS SCENARIOS</h2>
         </div>
         <div id="carrusel" class="slider">
-          <div id="carrusel-slides" class="slides"></div>
+          <div id="carrusel-slides" class="slides">
+
+
+          <?php foreach ($resultats as $resultat): ?>
+
+            <div class="slide">
+ <div class="scenario">
+ 
+   <div class="content">
+   <div class="scenario-title"><p><?= $resultat["nom"] ?></p></div>
+
+     <a href="./scenario-<?= $resultat["id"] ?>" >
+      <div class="content-overlay"></div>
+
+       <img class="content-image" src="<?= $resultat[
+           "image"
+       ] ?>" alt="<?= $resultat["nom"] ?>">
+       <div class="content-details fadeIn-bottom">
+         <p class="content-text"><?= $resultat["short_resume"] ?></p>
+         <hr class="separator">
+         <div class="scenario-details flex">
+            <div class="flex"><span class="badge info"> <?= DIFFICULTY[
+                $resultat["difficulty"]
+            ] ?></span></div>
+            <div class="flex"><span class="badge info"><?= $resultat[
+                "min_players"
+            ] ?>à <?= $resultat["max_players"] ?> joueurs</span></div>
+            <div class="flex"><span class="badge info"><?= $resultat[
+                "time_mins"
+            ] ?> mins</span></div>
+
+        </div>
+       </div>
+     </a>
+   </div>
+ </div>
+</div>
+
+
+           
+          <?php endforeach; ?>  
+
+          </div>
           <button class="btn-prev"></button>
           <button class="btn-next"></button>
         </div>
@@ -72,11 +122,11 @@
 
       </div>
 
-    <?php include_once __DIR__. '/includes/footer.php';?>
+    <?php include_once __DIR__ . "/includes/footer.php"; ?>
     </div>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
     <script src="./js/map.js"></script>
-    <script src="./js/scenarios.js"></script>
+    <!-- <script src="./js/scenarios.js"></script> -->
     <script src="./js/carrusel.js"></script>
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
