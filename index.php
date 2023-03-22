@@ -26,7 +26,6 @@
         <div id="div_nav">
           <div id="div-ul">
             <ul id="links_menu">
-
             </ul>
           </div>
           <div class="icons"></div>
