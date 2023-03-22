@@ -77,14 +77,16 @@
           </div>
       </div>
     </div>
-    <!-- <hr> -->
+
+    <!-- <hr>s -->
+
     <div class="footer">
       <div class="copyright">
         <img class="logoFooter" src="./images/logo.png" />
         <p>Copyright © 2020 Agen Escape Mentions légales</p>
         <p>Création graphique <span class="spanNomGroupe">Studio chromatique</span>
         </p>
-        <p>Développement  <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
+        <p>Développement <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
         <hr>
         <div class="social">
         </div>
