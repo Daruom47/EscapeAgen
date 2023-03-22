@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
     <title>AGEN ESCAPE - ACCUEIL</title>
   </head>
@@ -71,7 +70,7 @@
           </div>
 
       </div>
-      <!-- <hr> -->
+
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
