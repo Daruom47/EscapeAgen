@@ -19,13 +19,12 @@
       <div id="overlayMessage">
         <p>Votre message a bien été envoyé à notre équipe</p>
       </div>
-      <!-- Button to close the overlay navigation -->
+
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="container"> 
       <?php include_once __DIR__. '/includes/navbar.php';?> 
       <div class="slogan flex">
-        <!-- <img alt="Escapez-vous de la routine!" src="./images/slogan.png"> -->
       </div>
       <div id="presentationEscape">
         <div class="welcomeText">
@@ -68,18 +67,16 @@
             <a title="Naviguer avec Waze" href="https://www.waze.com/fr/livemap/directions?to=ll.44.19858834985041%2C0.6318457930048904" target="_blank">
               <img alt="Icône de Waze" src="./images/icon_waze.png">
             </a>
-            <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
           </div>
 
       </div>
-    </div>
+
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
     <script src="./js/map.js"></script>
     <script src="./js/scenarios.js"></script>
     <script src="./js/carrusel.js"></script>
-    <!-- <script src="./js/nav.js"></script> -->
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
   </body>
