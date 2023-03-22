@@ -39,20 +39,23 @@
           </div>
         </div>
       </div>
-      <div id="scenariosList" class="flex">
-        <div class="subtitleStyle">
-          <h2 class="subtitle">NOS SCENARIOS</h2>
-        </div>
-        <div id="carrusel" class="slider">
-          <div id="carrusel-slides" class="slides"></div>
-          <button class="btn-prev"></button>
-          <button class="btn-next"></button>
-        </div>
+
+    <div id ="scenariosList" class="flex">
+      <div class="subtitleStyle"><h2 class="subtitle">NOS SCENARIOS</h2></div>
+      <div id="carrusel" class="slider">
+        <div id="carrusel-slides" class="slides"></div>
+        <button class="btn-prev"></button>
+        <button class="btn-next"></button>
       </div>
-      <div id="nousTrouver" class="nousTrouver flex column">
-        <div class="subtitleStyle">
-          <h2 class="subtitle">NOUS TROUVER</h2>
-        </div>
+    </div>
+
+
+    
+    <div id="nousTrouver" class="nousTrouver flex column">
+      <div class="subtitleStyle"><h2 class="subtitle">NOUS TROUVER</h2></div>
+      
+
+
         <div class="map">
           <div id="map"></div>
         </div>
@@ -70,12 +73,34 @@
             </a>
             <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
           </div>
+
+
+      </div>
+
+
+    </div>
+    <!-- <hr> -->
+    <div class="footer">
+      <div class="copyright">
+        <img class="logoFooter" src="./images/logo.png" />
+        <p>Copyright © 2020 Agen Escape Mentions légales</p>
+        <p>Création graphique <span class="spanNomGroupe">Studio chromatique</span>
+        </p>
+        <p>Développement <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
+        <hr>
+        <div class="social">
         </div>
       </div>
       <!-- <hr> -->
     <?php include_once __DIR__. '/includes/footer.php';?>
     </div>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
+    </div>
+
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap">
+</script>
+
     <script src="./js/map.js"></script>
     <script src="./js/scenarios.js"></script>
     <script src="./js/carrusel.js"></script>
