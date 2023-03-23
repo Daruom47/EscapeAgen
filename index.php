@@ -44,6 +44,8 @@ require_once __DIR__ . "/class/scenario.class.php";
           <p class="presentationText"></p>
         </div>
       </div>
+
+
     </div>
     <div id="scenariosList" class="flex">
       <div class="subtitleStyle">
@@ -112,7 +114,9 @@ require_once __DIR__ . "/class/scenario.class.php";
       </div> <?php include_once __DIR__ . "/includes/footer.php"; ?>
 
     </div>
+
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
+
     <script src="./js/map.js"></script>
     <!-- <script src="./js/scenarios.js"></script> -->
     <script src="./js/carrusel.js"></script>
