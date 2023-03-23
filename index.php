@@ -38,102 +38,10 @@ require_once __DIR__ . "/class/scenario.class.php";
         <div id="presentationAnimation">
           <p class="presentationText"></p>
         </div>
-<<<<<<< HEAD
-        <div class="flex">
-          <div id="presentationAnimation">
-            <p class="presentationText"></p>
-          </div>
-        </div>
-      </div>
-    <div id ="scenariosList" class="flex">
-      <div class="subtitleStyle"><h2 class="subtitle">NOS SCENARIOS</h2></div>
-      <div id="carrusel" class="slider">
-        <div id="carrusel-slides" class="slides"></div>
-        <button class="btn-prev"></button>
-        <button class="btn-next"></button>
-      </div>
-    </div>
-    <div id="nousTrouver" class="nousTrouver flex column">
-      <div class="subtitleStyle"><h2 class="subtitle">NOUS TROUVER</h2></div>
-      <div id="scenariosList" class="flex">
-        <div class="subtitleStyle">
-          <h2 class="subtitle">NOS SCENARIOS</h2>
-        </div>
-        <div id="carrusel" class="slider">
-          <div id="carrusel-slides" class="slides"></div>
-          <button class="btn-prev"></button>
-          <button class="btn-next"></button>
-        </div>
-      </div>
-      <div id="nousTrouver" class="nousTrouver flex column">
-        <div class="subtitleStyle">
-          <h2 class="subtitle">NOUS TROUVER</h2>
-        </div>
-
-        <div class="map">
-          <div id="map"></div>
-        </div>
-        <div class="informationMap">
-          <div class="navigation">
-            <p>Nous nous situons <span>7 Rue Paganel, 47000 Agen</span>
-            </p>
-            <p>Tél: <a id="tel"></a>
-            </p>
-            <a title="Naviguer avec Google Map" href="https://www.google.com/maps/search/?api=1&query=44.19858834985041,0.6318457930048904" target="_blank">
-              <img alt="Icône de Google Map" src="./images/icon_googlemap.png">
-            </a>
-            <a title="Naviguer avec Waze" href="https://www.waze.com/fr/livemap/directions?to=ll.44.19858834985041%2C0.6318457930048904" target="_blank">
-              <img alt="Icône de Waze" src="./images/icon_waze.png">
-            </a>
-            <!-- <p>(Cliquez sur une icône afin de lancer votre GPS)</p> -->
-          </div>
-
-=======
->>>>>>> a7f9fcff5f89663fa316288091aaddb26a5a1e62
       </div>
 
 
     </div>
-<<<<<<< HEAD
-    <!-- <hr> -->
-    <div class="footer">
-      <div class="copyright">
-        <img class="logoFooter" src="./images/logo.png" />
-        <p>Copyright © 2020 Agen Escape Mentions légales</p>
-        <p>Création graphique <span class="spanNomGroupe">Studio chromatique</span>
-        </p>
-        <p>Développement  <span class="spanNomGroupe">Studio chromatique</span> Gestion des cookies </p>
-        <hr>
-        <div class="social">
-        </div>
-      </div>
-      <div class="row input-container">
-        <div>
-          <div class="styled-input wide">
-            <input id="name" type="text" required />
-            <label>Nom</label>
-          </div>
-        </div>
-        <div>
-          <div class="styled-input wide">
-            <input id="email" type="text" required />
-            <label>Email</label>
-          </div>
-        </div>
-        <div>
-          <div class="styled-input wide">
-            <textarea id="message" required></textarea>
-            <label>Message</label>
-          </div>
-        </div>
-        <div>
-          <div id="formButton" class="btn-lrg submit-btn">Envoyer le message</div>
-
-        </div>
-      </div>
-      <!-- <hr> -->
-    <?php include_once __DIR__. '/includes/footer.php';?>
-=======
     <div id="scenariosList" class="flex">
       <div class="subtitleStyle">
         <h2 class="subtitle">NOS SCENARIOS</h2>
@@ -199,7 +107,6 @@ require_once __DIR__ . "/class/scenario.class.php";
           </a>
         </div>
       </div> <?php include_once __DIR__ . "/includes/footer.php"; ?>
->>>>>>> a7f9fcff5f89663fa316288091aaddb26a5a1e62
     </div>
 
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
