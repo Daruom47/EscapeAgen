@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             $_SESSION['id_user'] = $recupUser->fetch()['id_user'];
-            header('Location: index.phpm');
+            header('Location: index.php');
         }else{
             $erreur = true;
         }
