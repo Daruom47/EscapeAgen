@@ -14,14 +14,14 @@
                   {
                   ?>
                   <li><a href="#"><?php echo $_SESSION['name']; ?></a></li>
-                  <li><a href="../template/loginView/login.php">SE DECONNECTER</a></li>
+                  <li><a href="./logout">SE DECONNECTER</a></li>
                   <?php
                   }
                   else
                   {
                   ?>
-                  <li><a href="../template/loginView/login.php">SE CONNECTER</a></li>
-                  <li><a href="../template/signUpView/signup.php">S'INSCRIRE</a></li>
+                  <li><a href="./login">SE CONNECTER</a></li>
+                  <li><a href="./register">S'INSCRIRE</a></li>
                   <?php
                   }
                   ?>
