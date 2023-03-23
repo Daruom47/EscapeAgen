@@ -107,6 +107,7 @@ require_once __DIR__ . "/class/scenario.class.php";
           </a>
         </div>
       </div> <?php include_once __DIR__ . "/includes/footer.php"; ?>
+
     </div>
 
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
@@ -117,5 +118,4 @@ require_once __DIR__ . "/class/scenario.class.php";
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
 </body>
-
 </html>
