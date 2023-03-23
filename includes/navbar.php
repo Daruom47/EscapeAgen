@@ -10,7 +10,21 @@
           </div>
             <div class="icons">
               <ul id="links_menu">
+                  <?php  if(isset($_SESSION['email']))
+                  {
+                  ?>
+                  <li><a href="#"><?php echo $_SESSION['name']; ?></a></li>
+                  <li><a href="../template/loginView/login.php">SE DECONNECTER</a></li>
+                  <?php
+                  }
+                  else
+                  {
+                  ?>
                   <li><a href="../template/loginView/login.php">SE CONNECTER</a></li>
+                  <li><a href="../template/signUpView/signup.php">S'INSCRIRE</a></li>
+                  <?php
+                  }
+                  ?>
               </ul>
           </div>
         </div>
