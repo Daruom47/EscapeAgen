@@ -85,7 +85,7 @@ ul > li > a:hover {
     z-index: 99;
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1000px) {
     .menu_hamburger {
         display: block;
     }
