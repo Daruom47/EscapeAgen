@@ -23,7 +23,6 @@ class LoginController extends Login
 
         session_start();
         $_SESSION['nom'] = $user['nom'];
-
     }
 
     private function emptyInput()
