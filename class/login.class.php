@@ -1,54 +1,50 @@
 <?php
-require_once "../includes/config.php";
-require_once "../includes/fonctions.php";
-class Login
+include 'database.php';
+
+class Login extends Database
 {
-    protected function getUser($email, $password)
+    public function getUser($email, $password)
     {
+        $stmt = $this->connect()->prepare('SELECT mdp FROM user WHERE mail = ? LIMIT 1;');
 
-        $stmt = $this->db->prepare('SELECT password FROM user WHERE email = ? OR passwprd = ?;');
-
-        if(!$stmt->execute(array($email, $password)))
-        {
+        if (!$stmt->execute(array($email))) {
             $stmt = null;
-            header('location : ../index.php?error=stmtfailed');
+            header('location : ../template/loginView/login.php?error=stmtfailed');
             exit();
         }
-        if($stmt->rowCount() == 0)
-        {
+        if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header('location: ../index.php?error=usernotfound');
+            header('location: ../template/loginView/login.php?error=invalidCredentials');
             exit();
         }
-        $passwordHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $checkPassword = password_verify($password, $passwordHashed[0]['password']);
-        if($checkPassword == false)
-        {
+
+        $passwordHashed = $stmt->fetch(PDO::FETCH_ASSOC);
+        $checkPassword = password_verify($password, $passwordHashed['mdp']);
+
+        if (!$checkPassword) {
             $stmt = null;
-            header('location: ../index.php?error=wrongpassword');
+            header('location: ../template/loginView/login.php?error=invalidCredentials');
             exit();
-        }elseif ($checkPassword == true){
-
-            $stmt = $this->db->prepare('SELECT password FROM user WHERE email = ? OR passwprd = ?;');
-
-            if(!$stmt->execute(array($email, $password)))
-            {
-                $stmt = null;
-                header('location : ../index.php?error=stmtfailed');
-                exit();
-            }
-
-            $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            session_start();
-            $_SESSION['id'] = $user[0]['id'];
-            $_SESSION['email'] = $user[0]['email'];
         }
 
-        $stmt = null;
 
+        $stmt = $this->connect()->prepare('SELECT nom FROM user WHERE mail = ? LIMIT 1;');
 
+        if (!$stmt->execute(array($email))) {
+            $stmt = null;
+            header('location : ../template/loginView/login.php?error=stmtfailed');
+            exit();
+        }
 
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            header('location: ../template/loginView/login.php?error=invalidCredentials');
+            exit();
+        }
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $user;
     }
 
 }

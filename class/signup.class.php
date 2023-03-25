@@ -1,6 +1,6 @@
 <?php
-include 'dbh.php';
-class Signup extends Dbh
+include 'database.php';
+class Signup extends Database
 {
 
     protected function setUser($name,$password, $email)
@@ -16,11 +16,11 @@ class Signup extends Dbh
         }
         $stmt = null;
     }
-    protected function checkUser($name, $email)
+    protected function checkUser( $email)
     {
-        $stmt = $this->connect()->prepare('SELECT nom FROM user WHERE nom = ? OR mail = ?;');
+        $stmt = $this->connect()->prepare('SELECT mail FROM user WHERE mail = ?;');
 
-        if(!$stmt->execute(array($name,$email))){
+        if(!$stmt->execute(array($email))){
             $stmt = null;
             header("location ../index.php?error=stmtfailed");
             exit();

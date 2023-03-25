@@ -2,30 +2,6 @@
 require_once '../../includes/config.php';
 require_once "../../includes/fonctions.php";
 $bd = connect();
-
-/*$erreur = "";
-
-if(isset($_POST['submit'])){
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
-        $email = htmlspecialchars($_POST["email"]);
-        $password = $_POST['password'];
-
-        $recupUser = $bd->prepare('SELECT * FROM user WHERE email = ? AND password = ?');
-        $recupUser->execute(array($email, $password));
-
-        if($recupUser->rowCount()> 0){
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
-            $_SESSION['id_user'] = $recupUser->fetch()['id_user'];
-            header('Location: index.php');
-            exit;
-        }else{
-            $erreur = true;
-        }
-    }else{
-        echo"Veuillez compléter tous les champs";
-    }
-}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,14 +18,14 @@ if(isset($_POST['submit'])){
 <body>
 <img src="../images/backgrounds/4.png" class="blur">
 <div class="login-box">
-    <h2>Login</h2>
-    <form method="POST" action="login.php">
+    <h1>Login</h1>
+    <form method="POST" action="/includes/login.inc.php">
         <div class="user-box">
-            <input type="email" name="email" required="">
+            <input type="email" id="email" name="email" required="">
             <label>Email</label>
         </div>
         <div class="user-box">
-            <input type="password" name="password" required="">
+            <input type="password" id="password" name="password" required="">
             <label>Mot de passe</label>
         </div>
         <button class="btn" type="submit" name="submit">

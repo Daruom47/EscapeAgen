@@ -1,12 +1,8 @@
 <?php
-//session_start();
+session_start();
 require_once __DIR__ . "/includes/config.php";
 require_once __DIR__ . "/includes/fonctions.php";
 require_once __DIR__ . "/class/scenario.class.php";
-
-/*if(isset($_SESSION['email']) && isset($_SESSION['password'])){
-    $_SESSION['logged_in'] = true;
-}*/
 ?>
 <!DOCTYPE html>
 <html lang="fr">

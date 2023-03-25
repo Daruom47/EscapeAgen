@@ -10,11 +10,12 @@
           </div>
             <div class="icons">
               <ul id="links_menu">
-                  <?php  if(isset($_SESSION['email']))
+                  <?php
+                  if(isset($_SESSION['nom']))
                   {
                   ?>
-                  <li><a href="#"><?php echo $_SESSION['name']; ?></a></li>
-                  <li><a href="../template/loginView/login.php">SE DECONNECTER</a></li>
+                  <li><a href="#"><?php echo $_SESSION['nom']; ?></a></li>
+                  <li><a href="/includes/logout.inc.php">SE DECONNECTER</a></li>
                   <?php
                   }
                   else

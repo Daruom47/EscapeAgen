@@ -99,7 +99,7 @@ class SignupController extends Signup
 
     private function userIdTakenCheck(){
         $result = false;
-        if(!$this->checkUser($this->name, $this->email))
+        if(!$this->checkUser($this->email))
         {
             $result = false;
         }

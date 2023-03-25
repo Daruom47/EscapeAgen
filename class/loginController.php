@@ -5,11 +5,12 @@ class LoginController extends Login
     private $email;
     private $password;
 
-    public function __constructController( $email, $password)
+    public function __construct( $email, $password)
     {
         $this->email = $email;
         $this->password = $password;
     }
+
 
     public function loginUser()
     {
@@ -17,8 +18,12 @@ class LoginController extends Login
             header('location: ../index.php?error=emptyinput');
             exit();
         }
+        $user = $this->getUser($this->email, $this->password);
 
-        $this->getUser($this->password, $this->email);
+
+        session_start();
+        $_SESSION['nom'] = $user['nom'];
+
     }
 
     private function emptyInput()
