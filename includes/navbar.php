@@ -14,7 +14,7 @@
                 if(isset($_SESSION['nom']))
                 {
                     ?>
-                    <li><a href="#"><?php echo $_SESSION['nom']; ?></a></li>
+                    <li><a href="/template/profileView/profile.php"><?php echo $_SESSION['nom']; ?></a></li>
                     <li><a href="/includes/logout.inc.php">SE DECONNECTER</a></li>
                     <?php
                 }
