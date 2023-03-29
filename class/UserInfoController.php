@@ -2,13 +2,13 @@
 
 class UserInfoController extends UserInfo {
     public function showProfile($id) {
-        $userModel = new UserInfo();
-        $user = $userModel->getUserById($id);
+        $userInfo = new UserInfo();
+        $user = $userInfo->getUserById($id);
         require_once '../template/profileView/profile.php';
     }
 
     public function updateProfile($id, $nom, $prenom, $adresse, $telephone, $mail) {
-        $userModel = new UserInfo();
+        $userInfo = new UserInfo();
 
         if (empty($prenom) || empty($mail)) {
             $error = "Le champ prenom ou mail ne peut pas être vide";
@@ -16,14 +16,14 @@ class UserInfoController extends UserInfo {
             return;
         }
 
-        $result = $userModel->updateUser($id, $nom, $prenom, $adresse, $telephone, $mail);
+        $result = $userInfo->updateUser($id, $nom, $prenom, $adresse, $telephone, $mail);
 
         if ($result) {
             $success = "Profil mis à jour avec succès";
         } else {
             $error = "Erreur lors de la mise à jour du profil";
         }
-        $user = $userModel->getUserById($id);
+        $user = $userInfo->getUserById($id);
         require_once '../../template/profileView/profile.php';
     }
 }
