@@ -22,7 +22,7 @@ $bd = connect();
     <form method="POST" action="/includes/signup.inc.php">
         <div class="user-box">
             <input type="text" name="name" id="name" required="">
-            <label>Nom</label>
+            <label>Prénom</label>
         </div>
         <div class="user-box">
             <input type="email" name="email" id="email" required="">

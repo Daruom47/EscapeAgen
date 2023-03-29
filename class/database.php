@@ -1,5 +1,5 @@
 <?php
-
+include_once '../../includes/config.php';
 class Database
 {
     public function connect() {

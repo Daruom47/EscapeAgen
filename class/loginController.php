@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class LoginController extends Login
 {
     private $email;
@@ -11,7 +11,6 @@ class LoginController extends Login
         $this->password = $password;
     }
 
-
     public function loginUser()
     {
         if ($this->emptyInput() == false) {
@@ -20,9 +19,8 @@ class LoginController extends Login
         }
         $user = $this->getUser($this->email, $this->password);
 
-
-        session_start();
-        $_SESSION['nom'] = $user['nom'];
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['prenom'] = $user['prenom'];
     }
 
     private function emptyInput()

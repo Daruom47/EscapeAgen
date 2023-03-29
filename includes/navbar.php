@@ -11,10 +11,10 @@
         <div class="icons">
             <ul id="links_menu">
                 <?php
-                if(isset($_SESSION['nom']))
+                if(isset($_SESSION['prenom']))
                 {
                     ?>
-                    <li><a href="/template/profileView/profile.php"><?php echo $_SESSION['nom']; ?></a></li>
+                    <li><a href="/template/profileView/profile.php"><?php echo $_SESSION['prenom']; ?></a></li>
                     <li><a href="/includes/logout.inc.php">SE DECONNECTER</a></li>
                     <?php
                 }
