@@ -44,42 +44,51 @@ require_once __DIR__ . "/class/scenario.class.php";
       <div class="subtitleStyle">
         <h2 class="subtitle">NOS SCENARIOS</h2>
       </div>
+        <div class ="listefiltre">
+        <div class="filtre">
+        <p>Recherche par Difficultée </p>
+          <form action="<?= $_SERVER["PHP_SELF"]?>" method = "post">
+            <select id="difficulty" name="difficulty" title="Difficulté" required>
+              <option value="">Sélectionnez une difficulté</option>
+              <?php
+                $options = DIFFICULTY;
+                foreach ($options as $key => $value) {
+                  if ($value != 0)
+                  echo '<option value="' . $key . '">' . $value . '</option>';
+                }
+              ?>
+            </select>
+            <input type="submit" name="confirmerdifficulte" value="Confirmer"/>
+          </form>
+        </div>
+        <div class="filtre">
+        <p>Recherche par nombre de joueurs </p>
+          <form action="<?= $_SERVER["PHP_SELF"]?>" method = "post">
+            <input type="number" name="min_players" min="1" max="9" value="1" />
+            <h3><</h3>
+            <input type="number" name="max_players" min="2" max="10" value="10" />
+            <input type="submit" name="confirmernumberplayers" value="Confirmer"/>
+          </form>
+        </div>
+      </div>
       <div id="carrusel" class="slider">
         <div id="carrusel-slides" class="slides"> 
           <?php 
-            $s = new Scenario(); 
-            foreach ($s->getList() as $resultat) :
-          ?> <div class="slide">
-              <div class="scenario">
-                <div class="content">
-                  <div class="scenario-title">
-                    <p> <?= $resultat["nom"] ?> </p>
-                  </div>
-                  <a href="./scenario-
-													<?= $resultat["id"] ?>">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="
-														<?= $resultat["image"] ?>" alt="
-														<?= $resultat["nom"] ?>">
-                    <div class="content-details fadeIn-bottom">
-                      <p class="content-text"> <?= $resultat["short_resume"] ?> </p>
-                      <hr class="separator">
-                      <div class="scenario-details flex">
-                        <div class="flex">
-                          <span class="badge info"> <?= DIFFICULTY[$resultat["difficulty"]] ?> </span>
-                        </div>
-                        <div class="flex">
-                          <span class="badge info"> <?= $resultat["min_players"] ?>à <?= $resultat["max_players"] ?> joueurs </span>
-                        </div>
-                        <div class="flex">
-                          <span class="badge info"> <?= $resultat["time_mins"] ?> mins </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div> <?php endforeach; ?> </div>
+            // $s = new Scenario();
+            // foreach ($s->getListByDifficulty($onlyDisplayEnabled = true,$_POST['difficulty']) as $resultat) :
+            $s = new Scenario();
+            foreach ($s->getList($onlyDisplayEnabled = true) as $resultat):
+              if (isset($_POST['confirmerdifficulte'])){
+                if ($resultat['difficulty'] == $_POST['difficulty']){
+                  include('includes/listescenar.php');
+              }
+            } elseif (isset($_POST['confirmernumberplayers'])){
+              if ($resultat['min_players'] >= $_POST['min_players'] && $resultat['max_players'] <= $_POST['max_players']){
+                include('includes/listescenar.php');
+              }
+            } else 
+            include('includes/listescenar.php');
+            endforeach; ?> </div>
         <button class="btn-prev"></button>
         <button class="btn-next"></button>
       </div>
@@ -113,5 +122,6 @@ require_once __DIR__ . "/class/scenario.class.php";
     <script src="./js/carrusel.js"></script>
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
+    <script src="./js/filtre_scenario.js"></script>
 </body>
 </html>

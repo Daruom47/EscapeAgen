@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteBase /escapephp/
+RewriteBase /escape/
 RewriteCond %{REQUEST_URI} !^/(.*)/
 RewriteRule ^(.*)$ /%{REQUEST_URI}/$1 [L]
 RewriteRule tarifs$ tarif.php
