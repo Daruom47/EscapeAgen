@@ -2,6 +2,7 @@
 require_once  "../includes/config.php";
 require_once  "../includes/fonctions.php";
 require_once  "../class/scenario.class.php";
+ini_set('upload_max_filesize', '10M');
 header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     switch ($_GET['action']) {
@@ -15,11 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $uploadDir = "../images/upload/";
             $randomName = md5(uniqid(rand(), true)) . '.' . $fieldsAreValid['imageFileType'];
             $uploadFile = $uploadDir . $randomName;
-
+            
             if (!move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
-                $error = array("message" => "Erreur lors de la sauvegarde de l'image");
+                $error = array("message" => "Erreur lors de la sauvegarde de l'image : " . $_FILES['image']['tmp_name'] . " => " . $uploadFile);
                 echo json_encode($error);
-                die();
             }
 
             $scenario = array(
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $scenarioObject = new Scenario();
             $scenarioToUpdate = $scenarioObject->get($id);
-
+            // die(var_dump($_FILES));
             if (!$scenarioToUpdate) {
                 $error = array("message" => "Le scénario à modifier n'existe pas");
                 echo json_encode($error);

@@ -6,4 +6,6 @@ RewriteRule ^(.*)$ /%{REQUEST_URI}/$1 [L]
 RewriteRule tarifs$ tarif.php
 RewriteRule reserver$ reservation.php
 RewriteRule accueil$ index.php
+RewriteRule register$ ./template/signUpView/signup.php
+RewriteRule login$ ./template/loginView/login.php
 RewriteRule scenario-(.*)$ PageScenar.php?scenario=$1 [L]

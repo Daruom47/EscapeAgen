@@ -9,7 +9,6 @@ $scenario = new Scenario();
     <div class="adminMsg">
         <h1 class="textAnimation">ADMINISTRATION</h1>
         <h2>SCENARIOS</h2>
-        
         <?php require_once "../templates/admin_liste_scenarios.php";?>    
         <?php require_once "../templates/admin_form_scenario.php";?>
     </div>
