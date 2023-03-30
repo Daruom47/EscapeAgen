@@ -1,3 +1,11 @@
+<?php
+require_once __DIR__ . "/includes/config.php";
+require_once __DIR__ . "/includes/fonctions.php";
+require_once __DIR__ . "/class/scenario.class.php";
+
+$scenario = new Scenario();
+    $info = $scenario->get($_GET['scenario']);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,15 +36,15 @@
     <!-- BODY -->
     <div class="container0">
         <div class="storycontainer">
-            <div class="storyimg"><img src="./images/scenarios/scenario_1.png"></div>
+            <div class="storyimg"><img src="<?php echo $info['image'];?>"></div>
             <div class="storycontainer2">  
-                <div class="storytitle">Titre</div>
-                <div class="synopsis">Histoire</div>
+                <div class="storytitle"><?php echo $info['nom'];?></div>
+                <div class="synopsis"><?php echo $info['resume_complet'];?></div>
                 <div class="storycontainer3">
-                    <div class="difficulte">Difficulté</div>
+                    <div class="difficulte">Difficulté <?php echo DIFFICULTY[$info['difficulty']];?></div>
                     <div class="storycontainer4">
-                        <div class="min">0 joueurs minimum</div>
-                        <div class="max">99 joueurs maximum</div>
+                        <div class="min"><?php echo $info['min_players'];?> joueurs minimum</div>
+                        <div class="max"><?php echo $info['max_players'];?> joueurs maximum</div>
                     </div>
                 </div>
             </div>
@@ -116,7 +124,7 @@
       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script> -->
       <!-- <script src="./js/carrusel.js"></script> -->
       <!-- <script src="./js/nav.js"></script> -->
-      <script src="./js/scenarios.js"></script>
+      <!-- <script src="./js/scenarios.js"></script> -->
       <script src="./js/bodyscript.js"></script>
       <!-- <script src="./js/keystroke.js"></script> -->
       <script src="./js/formulaire.js"></script>
