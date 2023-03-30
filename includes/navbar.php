@@ -12,8 +12,8 @@
                 ?>
                 <ul id="links_menu">
                 <li><a href="./accueil#scenariosList">SCENARIOS</a></li>
-                <li><a href="/tarifs">TARIFS</a></li>
-                <li><a href="/reserver">RESERVER</a></li>
+                <li><a href="./tarifs">TARIFS</a></li>
+                <li><a href="./reserver">RESERVER</a></li>
                 <li><a href="./accueil#nousTrouver">NOUS TROUVER</a></li>
             </ul>
             <?php
@@ -48,8 +48,20 @@
             </ul>
         </div>
     </div>
-    <div id="logo">
-        <img src="./images/logo.png" alt="img_logo">
-    </div>
+    <?php
+    if(strpos($_SERVER['PHP_SELF'], 'profile.php') !== false) {
+        ?>
+        <div id="logo">
+            <img src="../../images/logo.png" alt="img_logo">
+        </div>
+        <?php
+    } else {
+    ?>
+        <div id="logo">
+            <img src="./images/logo.png" alt="img_logo">
+        </div>
+    <?php
+    }
+    ?>
     <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
 </div>
