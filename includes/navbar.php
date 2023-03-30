@@ -21,8 +21,8 @@
                 else
                 {
                     ?>
-                    <li><a href="../template/loginView/login.php">SE CONNECTER</a></li>
-                    <li><a href="../template/signUpView/signup.php">S'INSCRIRE</a></li>
+                    <li><a href="./template/loginView/login.php">SE CONNECTER</a></li>
+                    <li><a href="./template/signUpView/signup.php">S'INSCRIRE</a></li>
                     <?php
                 }
                 ?>
