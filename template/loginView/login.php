@@ -19,7 +19,7 @@ $bd = connect();
 <img src="./images/backgrounds/4.png" class="blur">
 <div class="login-box">
     <h1>Login</h1>
-    <form method="POST" action="/includes/login.inc.php">
+    <form method="POST" action="../../includes/login.inc.php">
         <div class="user-box">
             <input type="email" id="email" name="email" required="">
             <label>Email</label>
