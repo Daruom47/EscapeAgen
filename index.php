@@ -80,7 +80,7 @@ require_once __DIR__ . "/class/scenario.class.php";
             // $s = new Scenario();
             // foreach ($s->getListByDifficulty($onlyDisplayEnabled = true,$_POST['difficulty']) as $resultat) :
             $s = new Scenario();
-            foreach ($s->getList($onlyDisplayEnabled = true) as $resultat):
+            foreach ($s->getList(true) as $resultat):
               if (isset($_POST['confirmerdifficulte'])){
                 if ($resultat['difficulty'] == $_POST['difficulty']){
                   include('includes/listescenar.php');
