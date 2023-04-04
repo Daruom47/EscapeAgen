@@ -9,6 +9,7 @@
             <link rel="stylesheet" href="../css/styles.css" />
             <link rel="stylesheet" href="../css/admin.css?<?= time(); ?>" />
             <link rel="stylesheet" href="../css/admin_reservation.css">
+            <link rel="stylesheet" href="../css/admin_user.css">
             <!-- <link rel="stylesheet" href="../css/footer.css" /> -->
             <link rel="stylesheet" href="../css/nav.css">
             <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
