@@ -54,14 +54,16 @@
         <div id="logo">
             <img src="../../images/logo.png" alt="img_logo">
         </div>
+        <img src="../../images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
         <?php
     } else {
     ?>
         <div id="logo">
             <img src="./images/logo.png" alt="img_logo">
         </div>
-    <?php
+        <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
+
+        <?php
     }
     ?>
-    <img src="./images/menu-btn1.png" alt="menu_hamburger" class="menu_hamburger">
 </div>

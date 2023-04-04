@@ -5,7 +5,7 @@
 
                 <li><a href="../admin/scenarios.php">SCENARIOS</a></li>
                 <li><a href="../admin/reservations.php">RESERVATIONS</a></li>
-                <li><a href="#">CLIENTS</a></li>
+                <li><a href="adminClients.php">CLIENTS</a></li>
             </ul>
         </div>
     </div>

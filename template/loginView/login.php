@@ -32,6 +32,6 @@ $bd = connect();
             Se connecter
         </button>
     </form>
-    <a href="./accueil">Retour</a>
+    <a href="../../accueil">Retour</a>
 </div>
 </body>
