@@ -172,6 +172,7 @@ window.onload = () => {
 
             // On récupère la bonne modale
             let modal = document.querySelector(target);
+            console.log(modal);
             // On affiche la modale
             modal.classList.add("show");
 
