@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+include 'Database.php';
 
 class Login extends Database
 {
