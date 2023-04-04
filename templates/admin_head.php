@@ -8,8 +8,11 @@
             <link rel="stylesheet" href="../css/overlay.css" />
             <link rel="stylesheet" href="../css/styles.css" />
             <link rel="stylesheet" href="../css/admin.css?<?= time(); ?>" />
-            <link rel="stylesheet" href="../css/admin_reservation.css">
+            <!-- <link rel="stylesheet" href="../css/admin_reservation.css"> -->
             <?php 
+            if (basename($_SERVER['PHP_SELF'], '.php') == 'reservations') {
+                ?><link rel="stylesheet" href="../css/admin_reservation.css"><?php 
+            }
             if (basename($_SERVER['PHP_SELF'], '.php') == 'adminClients') {
                 ?><link rel="stylesheet" href="../css/admin_user.css"><?php 
             } 
