@@ -1,0 +1,188 @@
+
+  .modal{
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.modal.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content{
+    background-color: rgb(44, 43, 43);
+    /* max-width: 90vw; */
+    margin: auto;
+    flex: 1;
+    position: relative;
+}
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-header{
+    padding-left: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-body{
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-footer{
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.btn{
+    padding: 5px;
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-close{
+    background-color: red;
+}
+
+
+
+
+
+.adminScenarioList {
+    overflow-x: auto;
+    display: block;
+  }
+  
+  .adminScenarioList thead tr {
+    display: table-row;
+  }
+  
+  .adminScenarioList tbody {
+    display: block;
+  }
+  
+  .adminScenarioList th,
+  .adminScenarioList td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .adminScenarioList td:nth-child(1),
+  .adminScenarioList th:nth-child(1) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(2),
+  .adminScenarioList th:nth-child(2) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(3),
+  .adminScenarioList th:nth-child(3) {
+    width: 15%;
+  }
+  
+  .adminScenarioList td:nth-child(4),
+  .adminScenarioList th:nth-child(4) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(5),
+  .adminScenarioList th:nth-child(5) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(6),
+  .adminScenarioList th:nth-child(6) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(7),
+  .adminScenarioList th:nth-child(7) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(8),
+  .adminScenarioList th:nth-child(8) {
+    width: 10%;
+  }
+  
+  .adminScenarioList td:nth-child(9),
+  .adminScenarioList th:nth-child(9) {
+    width: 15%;
+  }
+
+  #form-modifier-reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form-modifier-reservation label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(44, 43, 43);
+  }
+  
+  #form-modifier-reservation input,
+  #form-modifier-reservation select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #form-modifier-reservation .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #form-modifier-reservation .btn-close {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }

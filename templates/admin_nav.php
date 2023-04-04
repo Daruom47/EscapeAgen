@@ -3,8 +3,8 @@
         <div id="div-ul">
             <ul id="links_menu">
 
-                <li><a href="#">SCENARIOS</a></li>
-                <li><a href="#">RESERVATIONS</a></li>
+                <li><a href="../admin/scenarios.php">SCENARIOS</a></li>
+                <li><a href="../admin/reservations.php">RESERVATIONS</a></li>
                 <li><a href="#">CLIENTS</a></li>
             </ul>
         </div>
