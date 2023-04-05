@@ -1,6 +1,6 @@
 <?php
-require_once  "../includes/config.php";
-require_once  "../includes/fonctions.php";
+require_once  "./includes/config.php";
+require_once  "./includes/fonctions.php";
 
 class Reservations
 {
@@ -11,12 +11,43 @@ class Reservations
         $this->db = connect();
     }
 
-    public function insert($id_user, $id_scenario, $heure)
+    public function insert($id_user, $id_scenario, $nom, $mail, $telephone, $nombre_adulte, $nombre_enfant, $jour, $heure, $information)
     {
-        $stmt = $this->db->prepare("INSERT INTO `reservation` (`id_user`, `id_scenario`, `heure`) VALUES (?, ?, ?)");
-        $stmt->bind_param("iis", $id_user, $id_scenario, $heure);
+        $stmt = $this->db->prepare("INSERT INTO `reservation` (`id_user`, `id_scenario`,`nom`,`mail`,`telephone`,`nombre_adulte`,`nombre_enfant`,`jour`,`heure`,`information`) VALUES (:id_user, :id_scenario, :nom, :mail, :telephone, :nombre_adulte, :nombre_enfant, :jour, :heure, :information)");
+
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->bindParam(':id_scenario', $id_scenario, PDO::PARAM_INT);
+        $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
+        $stmt->bindParam(':mail', $mail, PDO::PARAM_STR);
+        $stmt->bindParam(':telephone', $telephone, PDO::PARAM_STR);
+        $stmt->bindParam(':nombre_adulte', $nombre_adulte, PDO::PARAM_INT);
+        $stmt->bindParam(':nombre_enfant', $nombre_enfant, PDO::PARAM_INT);
+        $stmt->bindParam(':jour', $jour, PDO::PARAM_STR);
+        $stmt->bindParam(':heure', $heure, PDO::PARAM_STR);
+        $stmt->bindParam(':information', $information, PDO::PARAM_STR);
         $stmt->execute();
-        $stmt->close();
+        return true;
+    }
+
+    public function reservationExist($id_scenario, $jour, $heure)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM reservation WHERE id_scenario = :id_scenario AND jour = :jour AND heure = :heure");
+        $stmt->bindParam(':id_scenario', $id_scenario, PDO::PARAM_INT);
+        $stmt->bindParam(':jour', $jour, PDO::PARAM_STR);
+        $stmt->bindParam(':heure', $heure, PDO::PARAM_STR);
+        $stmt->execute();
+        $resultat = $stmt->rowCount();
+        if ($resultat > 0) {
+            // L'élément existe déjà en base de données
+            return true;
+        } else {
+            // L'élément n'existe pas en base de données
+            return false;
+        }
+    }
+    public function playerlimit($nombre_enfant,$nombre_adulte,$limitemin,$limitemax)
+    {
+        return $nombre_adulte + $nombre_enfant <= $limitemax && $nombre_adulte + $nombre_enfant >= $limitemin;
     }
 
     public function update($id, $id_user, $id_scenario, $heure)
