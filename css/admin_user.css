@@ -160,30 +160,7 @@
     cursor: pointer;
 }
 
-
-/* Ajouter un User */
-
-.add-user-form {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #292929;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px #DE9300;
-    /* overflow: hidden; */
-}
-
-.add-user-form label {
-    color: #DE9300;
-    font-weight: bold;
-    margin-right: 10px;
-    display: inline-block;
-    width: 100px;
-}
-
-.add-user-form input[type="text"],
-.add-user-form select,
-.add-user-form textarea {
+.add-user-form input[type="text"] {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #DE9300;
@@ -243,9 +220,6 @@
     flex-direction: row;
 }
 
-.add-user-form .form-group:last-child {
-    margin-bottom: 0;
-}
 
 .add-user-form .form-group.inline {
     display: flex;
@@ -270,18 +244,15 @@
         margin-bottom: 5px;
     }
 
-    .add-user-form input[type="text"],
-    .add-user-form select,
-    .add-user-form textarea {
+    .add-user-form input[type="text"]{
         font-size: 14px;
     }
-
-    .add-user-form .form-group.inline select,
     .add-user-form .form-group.inline input[type="number"] {
         flex-basis: 40%;
         margin-right: 5px;
     }
 }
+
 
 
 

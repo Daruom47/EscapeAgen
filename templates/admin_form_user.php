@@ -8,7 +8,7 @@
                 <input type="text" id="nom" name="nom"  placeholder="Nom">
             </div>
             <div class="form-group">
-                <input type="text" id="prenom" name="prenom" required placeholder="Prenom">
+                <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
             </div>
             <div class="form-group">
                 <input type="text" id="adresse" name="adresse"  placeholder="Adresse">
@@ -20,10 +20,11 @@
                 <input type="text" id="mail" name="mail" required placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="text" id="role" name="role" placeholder="Role">
+                <input type="text" id="role" name="role" placeholder="Rôle">
             </div>
-            </div>
+
             <button type="submit">Modifier</button>
+
         </form>
     </div>
 </div>
