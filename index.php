@@ -132,5 +132,6 @@ require_once __DIR__ . "/class/scenario.class.php";
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>
     <script src="./js/filtre_scenario.js"></script>
+    <script src="./js/nav.js"></script>
 </body>
 </html>
