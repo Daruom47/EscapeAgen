@@ -25,6 +25,7 @@ ul {
     padding: 0;
     display: flex;
     /* margin-left: 1vw; */
+    flex-direction: column;
 }
 #links_menu > li {
     margin-top: 26px;

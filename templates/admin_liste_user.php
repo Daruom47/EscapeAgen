@@ -2,7 +2,7 @@
 <table class="adminUserList">
   <thead>
     <tr>
-      <th>NOM</th>
+      <th>Nom</th>
       <th>Prénom</th>
       <th>Adresse</th>
       <th>Téléphone</th>
