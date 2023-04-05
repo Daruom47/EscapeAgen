@@ -71,7 +71,7 @@
     display: block;
   }
   
-  .adminScenarioList thead tr {
+  /* .adminScenarioList thead tr {
     display: table-row;
   }
   
@@ -82,7 +82,7 @@
   .adminScenarioList th,
   .adminScenarioList td {
     padding: 8px;
-    text-align: left;
+    text-align: left !important;
   }
   
   .adminScenarioList td:nth-child(1),
@@ -128,7 +128,7 @@
   .adminScenarioList td:nth-child(9),
   .adminScenarioList th:nth-child(9) {
     width: 15%;
-  }
+  } */
 
   #form-modifier-reservation {
     display: flex;

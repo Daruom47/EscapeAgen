@@ -19,31 +19,31 @@ if (isset($_POST['sup'])) {
 <table class="adminScenarioList">
   <thead>
     <tr>
-      <th>Scénario</th>
-      <th>NOM</th>
-      <th>Mail</th>
-      <th>Téléphone</th>
-      <th>Nombre d'adultes</th>
-      <th>Nombre d'enfants</th>
-      <th>Jour</th>
-      <th>Heure</th>
-      <th>Information</th>
-      <th>Gestion</th>
+      <th colspan="1">Scénario</th>
+      <th colspan="1">NOM</th>
+      <th colspan="1">Mail</th>
+      <th colspan="1">Téléphone</th>
+      <th colspan="1">Nombre d'adultes</th>
+      <th colspan="1">Nombre d'enfants</th>
+      <th colspan="1">Jour</th>
+      <th colspan="1">Heure</th>
+      <th colspan="1">Information</th>
+      <th colspan="1">Gestion</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($reservations->getReservations() as $r) : 
         $scenar =  $scenario->get($r['id_scenario']);  ?>
       <tr>
-        <td><?= $scenar['nom'] ?></td>
-        <td><?= $r['nom'] ?></td>
-        <td><?= $r['mail'] ?></td>
-        <td><?= $r['telephone'] ?></td>
-        <td><?= $r['nombre_adulte'] ?></td>
-        <td><?= $r['nombre_enfant'] ?></td>
-        <td><?= $r['jour'] ?></td>
-        <td><?= $r['heure'] ?></td>
-        <td><?= $r['information'] ?></td>
+        <td><?= htmlspecialchars($scenar['nom']) ?></td>
+        <td><?= htmlspecialchars($r['nom']) ?></td>
+        <td><?= htmlspecialchars($r['mail']) ?></td>
+        <td><?= htmlspecialchars($r['telephone']) ?></td>
+        <td><?= htmlspecialchars($r['nombre_adulte']) ?></td>
+        <td><?= htmlspecialchars($r['nombre_enfant']) ?></td>
+        <td><?= htmlspecialchars($r['jour']) ?></td>
+        <td><?= htmlspecialchars($r['heure']) ?></td>
+        <td><?= htmlspecialchars($r['information']) ?></td>
         <td><form action="#" method="post">
             <button class="btnModifier" data-target="#modal" data-toggle="modal" data-bs-id="<?= $r['id'] ?>">Modifier</button>
             <button class="btnSupprimer" data-target="#modal2" data-toggle="modal" data-bs-id="<?= $r['id'] ?>">Supprimer</button>
