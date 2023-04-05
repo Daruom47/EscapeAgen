@@ -7,7 +7,7 @@ This is a website for an Escape Room located in Agen, France. The website is des
 - **Admin Panel:** The website includes an admin panel that allows the owner of the escape room to manage the bookings, update the available times, and receive notifications when a new booking is made.
 - **Booking Page:** Customers can browse the available escape rooms and book their desired time slot directly through the website.
 - **Contact Form:** A contact form is available for customers to ask any questions they may have about the escape room experience.
-AND MORE...
+  **AND MORE...**
 
 ## Technologies Used
 
