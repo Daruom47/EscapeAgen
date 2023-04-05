@@ -21,6 +21,7 @@
 .modal-content{
     background-color: rgb(44, 43, 43);
     /* max-width: 90vw; */
+    max-width: 60%;
     margin: auto;
     flex: 1;
     position: relative;
