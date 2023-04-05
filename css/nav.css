@@ -25,7 +25,6 @@ ul {
     padding: 0;
     display: flex;
     /* margin-left: 1vw; */
-    flex-direction: column;
 }
 #links_menu > li {
     margin-top: 26px;
@@ -117,6 +116,10 @@ ul > li > a:hover {
 
     #div-ul ul {
         display: flex;
+        flex-direction: column;
+    }
+    ul {
+
         flex-direction: column;
     }
 }
