@@ -36,7 +36,11 @@ $("#formButton").on("click", function() {
                 } // replace with your desired data
             }).done(function( msg ) {
                 if (parseInt(msg) == 1) {
-                    alert("Votre message a bien été envoyé");
+                    $("#overlayBackground").css("width", "100%");
+                    $("#messageFormulaire").css("width", "100%");
+                    ["name", "email", "message"].forEach(function(e) {
+                        $("#" + e).val("");
+                    });
                 }
                 else
                     alert("Une erreur s'est produite");
