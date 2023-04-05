@@ -21,9 +21,7 @@ This is a website for an Escape Room located in Agen, France. The website is des
 
 To get started with this project, you will need to have a web server with PHP and MySQL installed. Once you have a server set up, you can clone this repository and run the website locally.
 
-To set up the database, you can import the `database.sql` file located in the `database` folder.
-
-You will also need to update the `config.php` file with your MySQL database credentials.
+To establish a connection with your database, you can modify the information in the config.php file by replacing it with your own database credentials.
 
 ## Contributing
 
