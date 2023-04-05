@@ -172,7 +172,7 @@ window.onload = () => {
 
             // On récupère la bonne modale
             let modal = document.querySelector(target);
-            console.log(modal);
+            
             // On affiche la modale
             modal.classList.add("show");
 
@@ -196,38 +196,37 @@ window.onload = () => {
         });
     }
 
+    document.getElementById('form-modifier-reservation').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Récupérer les données du formulaire
+      const formData = new FormData(this);
+      
+      const id = formData.get('id');
+      
+      // Envoyer une requête Ajax pour mettre à jour la réservation
+      fetch('script_reservation.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Si la mise à jour a réussi, fermer la modale et recharger la page
+        if (data.success) {
+          document.getElementById('modal').classList.remove('show');
+          location.reload();
+        } else {
+          // Sinon, afficher une erreur
+          alert('Une erreur est survenue lors de la modification de la réservation.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Une erreur est survenue lors de la modification de la réservation.');
+      });
+    });
     
-
 } 
 
-document.getElementById('form-modifier-reservation').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Récupérer les données du formulaire
-  const formData = new FormData(this);
-  console.log(formData);
-  const id = formData.get('id');
-  
-  // Envoyer une requête Ajax pour mettre à jour la réservation
-  fetch('script_reservation.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Si la mise à jour a réussi, fermer la modale et recharger la page
-    if (data.success) {
-      document.getElementById('modal').classList.remove('show');
-      location.reload();
-    } else {
-      // Sinon, afficher une erreur
-      alert('Une erreur est survenue lors de la modification de la réservation.');
-    }
-  })
-  .catch(error => {
-    console.error(error);
-    alert('Une erreur est survenue lors de la modification de la réservation.');
-  });
-});
 </script>
 
