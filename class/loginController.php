@@ -21,6 +21,11 @@ class LoginController extends Login
 
         $_SESSION['id'] = $user['id'];
         $_SESSION['prenom'] = $user['prenom'];
+        $_SESSION['role'] = $user['role'];
+
+        $page = ($_SESSION['role'] == 'admin'? './../admin/scenarios.php' : './../index.php');
+        header('location: ' . $page) ;
+        exit;
     }
 
     private function emptyInput()

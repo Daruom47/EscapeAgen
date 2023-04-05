@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+include 'Database.php';
 
 class Login extends Database
 {
@@ -28,7 +28,7 @@ class Login extends Database
         }
 
 
-        $stmt = $this->connect()->prepare('SELECT id, prenom FROM user WHERE mail = ? LIMIT 1;');
+        $stmt = $this->connect()->prepare('SELECT id, prenom,role FROM user WHERE mail = ? LIMIT 1;');
 
         if (!$stmt->execute(array($email))) {
             $stmt = null;

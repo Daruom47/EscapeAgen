@@ -4,6 +4,7 @@ require __DIR__ . "/includes/config.php";
 require __DIR__ . "/includes/fonctions.php";
 require_once __DIR__ . "/class/scenario.class.php";
 require_once __DIR__ . "/class/reservations.class.php";
+
 ?>
 
 <!DOCTYPE html>

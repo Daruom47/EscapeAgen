@@ -1,0 +1,260 @@
+.adminUserList {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: black;
+    border: 2px solid #DE9300;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #DE9300;
+    position: relative;
+    overflow: hidden;
+}
+
+.adminUserList th,
+.adminUserList td {
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #DE9300;
+    font-size: 12px;
+}
+
+.adminUserList th {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    padding: 4px;
+}
+
+.adminUserList tr:nth-child(even) {
+    background-color: #333333;
+}
+
+
+.adminUserList th:first-child {
+    text-align: right;
+}
+
+.btnModifier,
+.btnSupprimer {
+    color: black;
+    background-color: #DE9300;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 12px;
+}
+
+.btnModifier:hover,
+.btnSupprimer:hover {
+    background-color: black;
+    color: #DE9300;
+}
+
+.adminUserList th:nth-child(2),
+.adminUserList td:nth-child(2) {
+    width: 15%;
+    text-align: center;
+}
+
+.adminUserList th:nth-child(4),
+.adminUserList td:nth-child(4) {
+    width: 15%;
+    text-align: center;
+}
+
+.adminUserList tr:hover {
+    background-color: #DE9300;
+    color: black;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+
+    .adminUserList th:nth-child(2),
+    .adminUserList td:nth-child(2),
+    .adminUserList th:nth-child(4),
+    .adminUserList td:nth-child(4) {
+        width: auto;
+        text-align: left;
+    }
+
+    .adminUserList th:nth-child(2),
+    .adminUserList td:nth-child(2) {
+        display: none;
+    }
+
+    .adminUserList td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        width: 40%;
+        text-align: right;
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .adminUserList img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btnModifier,
+    .btnSupprimer {
+        margin-bottom: 5px;
+    }
+}
+
+
+#add-user-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe80;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+}
+
+/* Style de la modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenu de la modal */
+.modal-content {
+    background-color: #1d1d1d;
+    color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid #de9300;
+    max-width: 700px;
+}
+
+/* Bouton de fermeture */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #de9300;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-user-form input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #DE9300;
+    color: white;
+    background-color: #1d1d1d;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+.add-user-form input[type="text"]:focus {
+    box-shadow: 0 0 5px #DE9300;
+}
+
+.add-user-form .players-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-user-form .duration-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.add-user-form button[type="submit"] {
+    background-color: #DE9300;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #DE9300;
+    transition: all 0.3s ease;
+}
+
+.add-user-form button[type="submit"]:hover {
+    background-color: #B76800;
+}
+
+.add-user-form h2 {
+    color: #DE9300;
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.add-user-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.add-user-form .form-group.inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-user-form .form-group.inline input[type="number"] {
+    flex-basis: 30%;
+    margin-right: 10px;
+}
+
+.add-user-form .form-group.inline label {
+    margin-right: 0;
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .add-user-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .add-user-form input[type="text"]{
+        font-size: 14px;
+    }
+    .add-user-form .form-group.inline input[type="number"] {
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+}
+
+
+
+
+
+

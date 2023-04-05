@@ -14,22 +14,6 @@ class Scenario
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getListByDifficulty($onlyDisplayEnabled = true, $scenario)
-    {
-        $requete = $this->db->prepare("SELECT * FROM scenario" . ($onlyDisplayEnabled ? " WHERE display=1 AND difficulty= :difficulty ;" : ";"));
-        $requete->bindParam(':difficulty', $scenario);
-        $requete->execute();
-        return $requete->fetchAll(PDO::FETCH_ASSOC);
-    }
-    public function getListByNumberOfPlayers($onlyDisplayEnabled = true, $playersMin, $playersMax)
-    {
-        $requete = $this->db->prepare("SELECT * FROM scenario" . ($onlyDisplayEnabled ? " WHERE display=1 AND min_players >= :min_players AND max_players <= :max_players ;" : ";"));
-        $requete->bindParam(':min_players', $playersMin);
-        $requete->bindParam(':max_players', $playersMax);
-        $requete->execute();
-        return $requete->fetchAll(PDO::FETCH_ASSOC);
-    }
-
     public function add($scenario)
     {
         try {

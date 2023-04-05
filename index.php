@@ -15,6 +15,10 @@ require_once __DIR__ . "/class/scenario.class.php";
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/nav.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
   <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" />
@@ -80,7 +84,7 @@ require_once __DIR__ . "/class/scenario.class.php";
             // $s = new Scenario();
             // foreach ($s->getListByDifficulty($onlyDisplayEnabled = true,$_POST['difficulty']) as $resultat) :
             $s = new Scenario();
-            foreach ($s->getList($onlyDisplayEnabled = true) as $resultat):
+            foreach ($s->getList(true) as $resultat):
               if (isset($_POST['confirmerdifficulte'])){
                 if ($resultat['difficulty'] == $_POST['difficulty']){
                   include('includes/listescenar.php');
@@ -123,7 +127,7 @@ require_once __DIR__ . "/class/scenario.class.php";
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXWmL8uaHo4sR7pP6wvOZ8LFMX0hqbWY&callback=initMap"></script>
 
     <script src="./js/map.js"></script>
-    <!-- <script src="./js/scenarios.js"></script> -->
+    <script src="./js/formulaire.js" ></script>
     <script src="./js/carrusel.js"></script>
     <script src="./js/keystroke.js"></script>
     <script src="./js/tel.js"></script>

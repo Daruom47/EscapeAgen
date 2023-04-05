@@ -11,13 +11,13 @@
         <div class="row input-container">
           <div>
             <div class="styled-input wide">
-              <input id="name" type="text" required />
+              <input id="name" type="text"  vrequired />
               <label>Nom</label>
             </div>
           </div>
           <div>
             <div class="styled-input wide">
-              <input id="email" type="text" required />
+              <input id="email" type="text"  required />
               <label>Email</label>
             </div>
           </div>
